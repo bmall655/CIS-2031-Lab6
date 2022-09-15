@@ -17,16 +17,23 @@ int max(int a, int b){
 // LAB QUESTION 3 - Write a function with an if statement
 
 //    (YOUR CODE HERE)
+int min(int a,int b){
+    if ( a > b ){
+        return b;
+    } else {
+        return a;
+    }
+}
 
 
 void main(){
     cout << "Which is larger, 42 or 96? " << max(42, 96) << endl;
 
     // LAB QUESTION 3 - Uncomment the next line
-    //cout << "Which is smaller, 12 or 100? " << min(12, 100) << endl;
+    cout << "Which is smaller, 12 or 100? " << min(12, 100) << endl;
 
     //LAB QUESTION 5 - Comment out the next line
-    return;
+    //return;
 
     //LAB QUESTIONS 6 & 7 is about this code:
 
@@ -34,11 +41,11 @@ void main(){
     cout << "Couning to ten!" << endl;
     int number = 0;
     tryTheNextNumber:
-    if ( number <= 10 ){
-        cout << "In the loop, number = " << number << endl;
+    while ( number < 10 ){
         number = number + 1;
-        goto tryTheNextNumber;
+        cout << "In the loop, number = " << number << endl;
     }
+
 
     cout << "I counted to ten, and the number variable = " << number << endl;
 
